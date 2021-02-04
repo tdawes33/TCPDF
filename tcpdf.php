@@ -15957,6 +15957,7 @@ class TCPDF {
 		$bprop = preg_split('/[\s]+/', trim($cssborder));
 		$border = array(); // value to be returned
 		switch (count($bprop)) {
+            case 4:                 // allow !important
 			case 3: {
 				$width = $bprop[0];
 				$style = $bprop[1];
